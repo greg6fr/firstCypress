@@ -1,0 +1,19 @@
+{
+  "name": "firstcypress",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "cypress:record": "npx cypress run --record --key acef3316-1af7-4bff-91ef-d3a8270018de",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "cypress": "^14.0.0"
+  },
+  "dependencies": {
+    "firstcypress": "file:"
+  }
+}

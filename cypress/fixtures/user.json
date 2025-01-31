@@ -1,0 +1,13 @@
+
+{ 
+
+  "userValid": {
+    "email": "greg6fr@gmail.com",
+    "password": "123456789" 
+  },
+  "invalidUser": {
+    "email": "greg7fr@gmail.com",
+    "password": "123456789" 
+  }
+
+}
