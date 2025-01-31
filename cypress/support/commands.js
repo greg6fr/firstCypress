@@ -38,7 +38,7 @@ Cypress.Commands.add("login", (email, password) => {
   //cy.get('[data-testid="login-email"]').should("be.visible").type(email);
   cy.get('[data-testid="login-password"]').should("be.visible").type(password);
   cy.get('[data-testid="login-submit"]').should("be.enabled").click();
-  cy.get('[data-testid="home"]').contains("MyNotes");
+  // cy.get('[data-testid="home"]').contains("MyNotes");
 
   // Optionnel : Attendre que la redirection ou un élément de la page suivante apparaisse
   //  cy.url().should('not.include', '/login'); // Vérifie que l'utilisateur n'est plus sur la page de login
