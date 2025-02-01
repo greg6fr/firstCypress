@@ -3,9 +3,22 @@ on: push
 jobs:
   chrome:
     runs-on: ubuntu-24.04
+    strategy:
+      # when one test fails, DO NOT cancel the other
+      # containers, because this will kill Cypress processes
+      # leaving Cypress Cloud hanging ...
+      # https://github.com/cypress-io/github-action/issues/48
+      fail-fast: false
+      matrix:
+        # run 3 copies of the current job in parallel
+        containers: [1, 2, 3]
     name: E2E on Chrome
     steps:
       - uses: actions/checkout@v4
       - uses: cypress-io/github-action@v6
         with:
           browser: chrome
+          record: true
+          parallel: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
